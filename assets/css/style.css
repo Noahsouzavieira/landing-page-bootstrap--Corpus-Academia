@@ -1,0 +1,187 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+
+
+
+body{
+    font-family:"Poppins", sans-serif;
+    line-height: 1.7;
+    color: white;
+    background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    color:white;
+}
+
+a{
+    color: rgb(255, 145, 0);
+    text-decoration:none;
+    transition: all 0.4s ease;
+    font-weight: 500;
+}
+
+a:hover{
+    color:red;
+}
+
+img{
+    width: 100%;
+}
+
+.link::before{
+    content:"";
+    width:10px;
+    height:2px;
+    background-color: rgb(255, 145, 0);
+    display:inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+
+}
+
+.link:hover::before{
+    width:30px;
+}
+
+section{
+    padding: 120px 0;
+}
+
+/*   HERO  */
+
+#hero{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(225, 100, 22, 0.74)),url(../images/esteira.jpg);
+    background-position:center;
+    background-size:cover;
+}
+
+/*  BTN  */
+.btn{
+    font-weight: 500;
+    padding: 14px 32px;
+    border-radius:0.3;
+    transition: all 0.2s ease;
+}
+
+.btn-primary{
+    color:black;
+    background-color: rgb(248, 102, 7);
+    border-color:rgb(248, 102, 7);
+}
+
+
+.btn-primary:hover{
+    background-color: rgb(248, 102, 7);
+    border-color:rgb(248, 102, 7);
+    transform:scale(1.1);
+}
+
+/* ABOUT */
+#about{
+ position: relative;
+ background:linear-gradient(rgba(0,0,0,0.3),rgba(80, 80, 80, 0.61));
+ 
+}
+
+#about::before{
+    /*criação da faixa do lado e de fundo na img*/
+    content:"";
+    width: 30%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgb(248, 102, 7);
+    z-index: -1;
+   
+}
+
+#about h6{
+    color:rgba(255, 115, 0, 0.829);
+    font-size:20px;
+}
+
+@media (max-width:992px) {
+    #about::before{
+    height: 40%;
+    width: 100%;
+    
+    }
+}
+
+/*SECTION TITTLE*/
+.section-tittle{
+    text-align: center;
+    max-width: 600px;
+    margin:0 auto 40px auto;
+
+}
+
+.section-tittle h6{
+    color:red;
+   font-size:20px;
+}
+
+/*PROJECT*/
+.project{
+    position:relative;
+    overflow:hidden;
+}
+
+.project img{
+    transition:all 1s ease;
+}
+
+.project a {
+    width: 120px;
+    height: 120px;
+    display:grid;
+    align-content: center;
+    text-align: center;
+    font-weight:12px;
+    font-weight:700px;
+    background-color: aliceblue;
+    position:absolute;
+    top:60%;
+    left:50%;
+    border-radius: 100px;
+    transform: translate(-50%, -50%);
+    transition:all 0.4s ease;
+    visibility:hidden;
+    opacity: 0;
+}
+
+.project:hover img {
+    transform: scale(1.2);
+}
+
+.project:hover a {
+    visibility: visible;
+    opacity: 1;
+    top: 50%;
+}
+
+/*FOOTER*/
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color:white;
+}
+
+.footer-top{
+    padding-top:120px;
+    padding-bottom:30px;
+}
+
+.footer-bottom{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgb(255, 145, 0);
+}
+
